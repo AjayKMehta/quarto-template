@@ -1,0 +1,80 @@
+---
+title: "Enter title here"
+execute:
+  keep-md: false
+format:
+  html:
+    mainfont: FiraCode Nerd Font Mono
+    code-tools: true
+    code-fold: show
+    code-overflow: scroll
+    code-copy: true
+    code-link: true
+    theme: lux
+    highlight-style: ayu-mirage
+    fig-responsive: true 
+    footnotes-hover: true
+    code-block-border-left: "#4f6952"
+    html-math-method: mathjax
+    number-sections: true
+    df-print: paged
+toc: true
+toc-location: right # default
+knitr:
+    opts_chunk:
+      class.error : "bg-danger text-danger"
+      dev : "ragg_png"
+      dpi : 300
+      fig.align: "center"
+      fig.retina: 3
+      fig.width: 6
+      out.width: "75%"
+      collapse: true
+      results: markup
+      cache: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+options(
+  warnPartialMatchArgs = FALSE,
+  warnPartialMatchDollar = FALSE,
+  cli.unicode = TRUE,
+  rlang_backtrace_on_error_report = "collapse",
+  rlang_backtrace_on_error = "branch",
+  rlang_trace_top_env = environment(),
+  digits = 3,
+  width = 110,
+  knitr.kable.NA = "",
+  crayon.enabled = TRUE,
+  cli.ignore_unknown_rstudio_theme = TRUE,
+  brms.file_refit = "on_change"
+)
+
+ragg_png <- function(..., res = 150) {
+  ragg::agg_png(..., res = res, units = "in")
+}
+
+knitr::opts_chunk$set(fig.height = (6 * 0.618))
+old.hooks <- fansi::set_knit_hooks(knitr::knit_hooks)
+
+styles <- c(
+  getOption("fansi.style", fansi::dflt_css()), # default style
+  "PRE.fansi-error {background-color: #DDAAAA;}",
+  "PRE.fansi-warning {background-color: #DDDDAA;}",
+  "PRE.fansi-message {background-color: #AAAADD;}"
+)
+
+old.hooks <- c(
+  old.hooks,
+  fansi::set_knit_hooks(
+    knitr::knit_hooks,
+    which = c("warning", "error", "message"),
+    style = styles
+  )
+)
+
+# To restore old hooks:
+# do.call(knitr::knit_hooks$set, old.hooks)
+```
