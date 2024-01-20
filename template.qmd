@@ -4,6 +4,7 @@ execute:
   keep-md: false
 format:
   html:
+    from: markdown+emoji
     mainfont: FiraCode Nerd Font Mono
     code-tools: true
     code-fold: show
@@ -23,8 +24,8 @@ toc-location: right # default
 knitr:
     opts_chunk:
       class.error : "bg-danger text-danger"
-      dev : "ragg_png"
-      dpi : 300
+      dev: "ragg_png"
+      dpi: 300
       fig.align: "center"
       fig.retina: 3
       fig.width: 6
