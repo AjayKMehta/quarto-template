@@ -2,6 +2,7 @@
 title: "Enter title here"
 execute:
   keep-md: false
+lightbox: true  
 format:
   html:
     from: markdown+emoji
