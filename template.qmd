@@ -19,13 +19,13 @@ format:
     footnotes-hover: true
     code-block-border-left: "#4f6952"
     html-math-method: mathjax
-    number-sections: true
+    number-sections: false
     df-print: paged
 toc: true
 toc-location: right # default
 knitr:
     opts_chunk:
-      class.error : "bg-danger text-danger"
+      class.error: "bg-danger text-danger"
       dev: "ragg_png"
       dpi: 300
       fig.align: "center"
@@ -43,6 +43,7 @@ knitr:
 options(
   warnPartialMatchArgs = FALSE,
   warnPartialMatchDollar = FALSE,
+  datatable.print.trunc.cols = TRUE,
   cli.unicode = TRUE,
   rlang_backtrace_on_error_report = "collapse",
   rlang_backtrace_on_error = "branch",
@@ -52,6 +53,7 @@ options(
   knitr.kable.NA = "",
   crayon.enabled = TRUE,
   cli.ignore_unknown_rstudio_theme = TRUE,
+  brms.backend = "cmdstanr",
   brms.file_refit = "on_change"
 )
 
