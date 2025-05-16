@@ -2,7 +2,7 @@
 title: "Enter title here"
 execute:
   keep-md: false
-lightbox: true  
+lightbox: true
 format:
   html:
     from: markdown+emoji
@@ -13,9 +13,11 @@ format:
     code-overflow: scroll
     code-copy: true
     code-link: true
-    theme: lux
+    theme:
+      dark: solar
+      light: lux
     highlight-style: ayu-mirage
-    fig-responsive: true 
+    fig-responsive: true
     footnotes-hover: true
     code-block-border-left: "#4f6952"
     html-math-method: mathjax
