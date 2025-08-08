@@ -6,6 +6,7 @@ lightbox: true
 format:
   html:
     from: markdown+emoji
+    anchor-sections: true
     mainfont: FiraCode Nerd Font Mono
     code-annotations: hover
     code-tools: true
@@ -23,7 +24,11 @@ format:
     html-math-method: mathjax
     number-sections: false
     df-print: paged
+    smooth-scroll: true
+    respect-user-color-scheme: true
 toc: true
+toc-depth: 2
+toc-title: Contents
 toc-location: right # default
 knitr:
     opts_chunk:
