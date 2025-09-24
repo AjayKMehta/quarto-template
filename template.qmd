@@ -17,7 +17,7 @@ format:
     theme:
       dark: solar
       light: lux
-    highlight-style: ayu-mirage
+    highlight-style: ayu
     fig-responsive: true
     footnotes-hover: true
     code-block-border-left: "#4f6952"
