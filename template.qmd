@@ -66,4 +66,26 @@ options(
 ragg_png <- function(..., res = 150) {
   ragg::agg_png(..., res = res, units = "in")
 }
+
+old.hooks <- fansi::set_knit_hooks(knitr::knit_hooks)
+
+
+styles <- c(
+  getOption("fansi.style", fansi::dflt_css()), # default style
+ "PRE.fansi-error {background-color: #DDAAAA;}",
+  "PRE.fansi-warning {background-color: #DDDDAA;}",
+  "PRE.fansi-message {background-color: #AAAADD;}"
+)
+
+old.hooks <- c(
+  old.hooks,
+  fansi::set_knit_hooks(
+    knitr::knit_hooks,
+    which = c("warning", "error", "message"),
+    style = styles
+  )
+)
+
+# To restore old hooks:
+# do.call(knitr::knit_hooks$set, old.hooks)
 ```
