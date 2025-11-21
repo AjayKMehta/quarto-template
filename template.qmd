@@ -72,7 +72,7 @@ old.hooks <- fansi::set_knit_hooks(knitr::knit_hooks)
 
 styles <- c(
   getOption("fansi.style", fansi::dflt_css()), # default style
- "PRE.fansi-error {background-color: #DDAAAA;}",
+  "PRE.fansi-error {background-color: #DDAAAA;}",
   "PRE.fansi-warning {background-color: #DDDDAA;}",
   "PRE.fansi-message {background-color: #AAAADD;}"
 )
