@@ -15,9 +15,11 @@ format:
     code-copy: true
     code-link: true
     theme:
-      dark: solar
-      light: lux
-    highlight-style: ayu
+      dark: darkly
+      light: lumen
+    highlight-style:
+       dark: dracula
+       light: github
     fig-responsive: true
     footnotes-hover: true
     code-block-border-left: "#4f6952"
