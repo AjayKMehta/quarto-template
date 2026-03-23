@@ -9,15 +9,17 @@ format:
     anchor-sections: true
     mainfont: FiraCode Nerd Font Mono
     code-annotations: hover
-    code-tools: true
     code-fold: show
     code-overflow: scroll
     code-copy: true
     code-link: true
+    code-tools: 
+      source: true
+      toggle: true
     theme:
       dark: darkly
       light: lumen
-    highlight-style:
+    syntax-highlighting:
        dark: dracula
        light: github
     fig-responsive: true
